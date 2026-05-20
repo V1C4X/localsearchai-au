@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>LocalSearchAI.au — Help AI tools understand, trust, and recommend your local business.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="description" content="A practical 13-page PDF guide and template bundle for Australian small businesses. Make your website easier for ChatGPT, Google AI, Perplexity, Gemini and Claude to understand and recommend. A$49."/>
+
+<template id="__bundler_thumbnail">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" fill="#faf3df"/>
+  <rect x="30" y="80" width="140" height="40" rx="20" fill="#fdf9ed" stroke="#1a1812" stroke-width="3"/>
+  <circle cx="55" cy="100" r="7" fill="none" stroke="#1a1812" stroke-width="2.4"/>
+  <line x1="60" y1="105" x2="68" y2="113" stroke="#1a1812" stroke-width="2.4" stroke-linecap="round"/>
+  <text x="78" y="105" font-family="Manrope, sans-serif" font-weight="500" font-size="13" fill="#1a1812">localsearch</text>
+  <text x="138" y="105" font-family="Manrope, sans-serif" font-weight="500" font-size="13" fill="#a87520">ai</text>
+  <text x="153" y="105" font-family="JetBrains Mono, monospace" font-size="10" fill="#75694a">.au</text>
+</svg>
+</template>
+
+<!-- Open Graph -->
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="LocalSearchAI.au · AI Search Ready Website Kit"/>
+<meta property="og:description" content="Help AI tools understand, trust, and recommend your local business. A$49 one-off."/>
+<meta property="og:image" content="brand/og.svg"/>
+
+<link rel="icon" type="image/svg+xml" href="brand/favicon.svg"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+
+<link rel="stylesheet" href="brand.css"/>
+
+<style>
+  html, body { margin: 0; padding: 0; background: var(--bg); }
+  body { font-family: 'Manrope', system-ui, sans-serif; color: var(--ink); }
+  /* Smooth scroll for anchor nav */
+  html { scroll-behavior: smooth; }
+
+  .ai-demo-card { min-height: 430px; }
+  .mobile-menu-toggle { display: none; }
+
+  /* Responsive overrides are intentionally scoped below desktop widths. */
+  @media (max-width: 1024px) {
+    *, *::before, *::after { box-sizing: border-box; }
+
+    .site-nav,
+    .hero-section,
+    .demo-section,
+    .content-section,
+    .final-cta-section,
+    .site-footer {
+      padding-left: 32px !important;
+      padding-right: 32px !important;
+    }
+
+    .site-nav { gap: 18px !important; align-items: flex-start !important; }
+    .site-nav-links { gap: 14px !important; flex-wrap: wrap !important; justify-content: flex-end !important; }
+    .hero-copy-grid,
+    .final-cta-grid,
+    .mod-row,
+    .faq-row {
+      grid-template-columns: 1fr !important;
+    }
+    .hero-copy-grid { gap: 34px !important; }
+    .final-cta-grid { gap: 28px !important; }
+    .stats-grid,
+    .buyer-grid,
+    .testimonial-grid {
+      grid-template-columns: 1fr !important;
+    }
+    .mod-row,
+    .faq-row {
+      gap: 12px !important;
+      align-items: start !important;
+    }
+    .section-title { max-width: none !important; }
+  }
+
+  @media (max-width: 720px) {
+    html, body { overflow-x: hidden; }
+    .site-nav,
+    .hero-section,
+    .demo-section,
+    .content-section,
+    .final-cta-section,
+    .site-footer {
+      padding-left: 18px !important;
+      padding-right: 18px !important;
+    }
+
+    .site-nav {
+      flex-direction: row !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      padding-top: 18px !important;
+      padding-bottom: 14px !important;
+    }
+    .mobile-menu-toggle {
+      display: inline-flex !important;
+      width: 42px;
+      height: 42px;
+      margin-left: auto;
+      padding: 0;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: rgba(253,249,237,0.86);
+      color: var(--ink);
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+    .mobile-menu-toggle span {
+      display: block;
+      width: 18px;
+      height: 2px;
+      background: currentColor;
+      border-radius: 999px;
+      transition: transform .2s ease, opacity .2s ease;
+    }
+    .mobile-menu-toggle.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .mobile-menu-toggle.is-open span:nth-child(2) { opacity: 0; }
+    .mobile-menu-toggle.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .site-nav-links {
+      display: none !important;
+      position: absolute !important;
+      right: 18px !important;
+      top: calc(100% - 4px) !important;
+      width: min(248px, calc(100vw - 36px)) !important;
+      padding: 10px !important;
+      border: 1px solid var(--line) !important;
+      border-radius: 8px !important;
+      background: rgba(253,249,237,0.98) !important;
+      box-shadow: 0 18px 36px -24px rgba(0,0,0,0.35) !important;
+      grid-template-columns: 1fr !important;
+      gap: 8px !important;
+      font-size: 13px !important;
+      z-index: 10 !important;
+    }
+    .site-nav-links.is-open {
+      display: grid !important;
+    }
+    .site-nav-link,
+    .site-nav-cta {
+      display: flex !important;
+      min-width: 0 !important;
+      width: 100% !important;
+      justify-content: center !important;
+      text-align: center !important;
+      padding: 10px 10px !important;
+      border-radius: 6px !important;
+      white-space: normal !important;
+    }
+    .site-nav-link {
+      border: 1px solid var(--line) !important;
+      background: rgba(253,249,237,0.72) !important;
+    }
+    .site-nav-cta { grid-column: auto !important; }
+
+    .hero-section { padding-top: 16px !important; }
+    .hero-media-frame { height: 420px !important; }
+    .hero-mockup-wrap {
+      right: 14px !important;
+      bottom: -38px !important;
+      transform: scale(0.74) !important;
+      transform-origin: bottom right !important;
+    }
+    .hero-media-tags {
+      left: 18px !important;
+      top: 18px !important;
+    }
+    .hero-media-meta {
+      left: 18px !important;
+      bottom: 20px !important;
+      max-width: 140px !important;
+      line-height: 1.45 !important;
+      letter-spacing: 0.08em !important;
+    }
+    .tag {
+      font-size: 9.5px !important;
+      padding: 4px 8px !important;
+      line-height: 1.2 !important;
+    }
+    .hero-copy-grid {
+      margin-top: 36px !important;
+      gap: 24px !important;
+    }
+    .hero-heading {
+      font-size: 44px !important;
+      line-height: 1 !important;
+    }
+    .hero-note {
+      margin-top: 18px !important;
+      gap: 12px !important;
+    }
+    .hero-copy-panel { padding-top: 0 !important; }
+    .hero-intro {
+      font-size: 16px !important;
+      line-height: 1.6 !important;
+    }
+    .hero-cta-row {
+      align-items: flex-start !important;
+      flex-direction: column !important;
+      gap: 12px !important;
+    }
+    .hero-proof-row {
+      flex-direction: column !important;
+      gap: 8px !important;
+    }
+
+    .demo-section { padding-top: 64px !important; }
+    .ai-demo-card {
+      min-height: 620px !important;
+      padding: 20px !important;
+    }
+    .demo-header {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      gap: 8px !important;
+    }
+    .demo-status { letter-spacing: 0.08em !important; }
+    .demo-prompt-bar {
+      align-items: flex-start !important;
+      gap: 10px !important;
+      padding: 14px !important;
+    }
+    .demo-prompt-text {
+      min-width: 0 !important;
+      font-size: 15px !important;
+      line-height: 1.35 !important;
+      overflow-wrap: anywhere !important;
+    }
+    .demo-prompt-action { display: none !important; }
+    .demo-thinking {
+      align-items: flex-start !important;
+      padding: 16px 8px !important;
+      flex-wrap: wrap !important;
+    }
+    .demo-answer-card { padding: 18px !important; }
+    .demo-answer-title {
+      font-size: 24px !important;
+      line-height: 1.08 !important;
+      overflow-wrap: anywhere !important;
+    }
+    .demo-note {
+      text-align: left !important;
+      line-height: 1.45 !important;
+    }
+
+    .content-section {
+      padding-top: 64px !important;
+      padding-bottom: 64px !important;
+    }
+    .section-body { margin-top: 30px !important; }
+    .section-title {
+      font-size: 36px !important;
+      line-height: 1.03 !important;
+    }
+    .section-kicker {
+      font-size: 16px !important;
+      line-height: 1.58 !important;
+    }
+    .stats-grid,
+    .buyer-grid,
+    .testimonial-grid {
+      gap: 16px !important;
+    }
+    .stat-card,
+    .buyer-card,
+    .testimonial-card {
+      padding: 22px !important;
+    }
+    .stat-number { font-size: 48px !important; }
+    .buyer-icon {
+      width: 38px !important;
+      height: 38px !important;
+      font-size: 18px !important;
+    }
+    .quote-strip {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      padding: 20px !important;
+    }
+    .quote-strip > div:last-child { white-space: normal !important; }
+    .modules-list { border-radius: 6px !important; }
+    .mod-row { padding: 20px !important; }
+    .mod-n { font-size: 36px !important; }
+    .kit-tags { gap: 8px !important; }
+    .testimonial-card { min-height: 0 !important; }
+    .faq-row { padding: 20px 0 !important; }
+
+    .final-cta-section {
+      padding-top: 72px !important;
+      padding-bottom: 72px !important;
+    }
+    .final-cta-title {
+      font-size: 44px !important;
+      line-height: 1 !important;
+    }
+    .final-cta-grid p { font-size: 15px !important; }
+    .site-footer-inner {
+      align-items: flex-start !important;
+      flex-direction: column !important;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .hero-heading { font-size: 39px !important; }
+    .hero-media-frame { height: 390px !important; }
+    .hero-mockup-wrap {
+      right: 8px !important;
+      bottom: -36px !important;
+      transform: scale(0.66) !important;
+    }
+    .section-title { font-size: 32px !important; }
+    .final-cta-title { font-size: 40px !important; }
+  }
+</style>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<!-- LocalBusiness schema — eats its own dogfood -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "AI Search Ready Website Kit",
+  "description": "A current 13-page PDF guide and template bundle for helping AI tools understand, trust, and recommend your local Australian business.",
+  "brand": { "@type": "Brand", "name": "LocalSearchAI.au" },
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "AUD",
+    "price": "49.00",
+    "availability": "https://schema.org/InStock"
+  }
+}
+</script>
+</head>
+<body data-theme="manuka">
+
+<div id="root"></div>
+
+<!-- HERO VIDEO SOURCE
+     When your video render is ready, drop it in (e.g. assets/hero.mp4)
+     and replace the empty string below. Until then, the animated AU landscape
+     plays in its place. -->
+<script>
+  window.__HERO_VIDEO_SRC = "";
+</script>
+
+<script type="text/babel" src="parts/brand-lockup.jsx"></script>
+<script type="text/babel" src="parts/landing.jsx"></script>
+
+<script type="text/babel" data-presets="react">
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <Landing videoSrc={window.__HERO_VIDEO_SRC || ''}/>
+);
+</script>
+</body>
+</html>
