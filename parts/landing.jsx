@@ -168,7 +168,8 @@ function KitMockup() {
           'Tradies · plumbers, sparkies, builders',
           'Clinics · physio, dental, vet',
           'Salons · hair, brows, nails',
-          'Hospo, retail & service pros'].
+          'Hospo, retail & service pros',
+          'Local businesses people search before they choose'].
           map((b, i) =>
           <li key={i} style={{ display: 'flex', gap: 6, fontSize: 9.5, lineHeight: 1.35, color: 'var(--ink-soft)' }}>
               <span style={{ color: 'var(--accent)', flexShrink: 0, fontFamily: '"JetBrains Mono", monospace' }}>—</span>
