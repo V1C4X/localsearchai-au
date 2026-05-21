@@ -1,11 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="LocalSearchAI.nz">
-  <title>LocalSearchAI.nz favicon</title>
-  <rect x="0" y="0" width="64" height="64" rx="13" ry="13" fill="#a87520"/>
-  <!-- Magnifying glass -->
-  <circle cx="26" cy="26" r="15" fill="none" stroke="#fdf9ed" stroke-width="4.5"/>
-  <line x1="37" y1="37" x2="50" y2="50" stroke="#fdf9ed" stroke-width="4.5" stroke-linecap="round"/>
-  <!-- AI dots -->
-  <circle cx="47" cy="12" r="5" fill="#fdf9ed"/>
-  <circle cx="54" cy="21" r="3.5" fill="#fdf9ed"/>
-  <circle cx="53" cy="30" r="2.5" fill="#fdf9ed"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="LocalSearchAI.au">
+  <title>LocalSearchAI.au</title>
+  <defs>
+    <radialGradient id="gold" cx="62%" cy="28%" r="70%">
+      <stop offset="0%"   stop-color="#d4a040"/>
+      <stop offset="100%" stop-color="#8a5e14"/>
+    </radialGradient>
+    <radialGradient id="iris" cx="45%" cy="35%" r="70%">
+      <stop offset="0%"   stop-color="#c48820"/>
+      <stop offset="70%"  stop-color="#8b5e14"/>
+      <stop offset="100%" stop-color="#5a3a08"/>
+    </radialGradient>
+    <radialGradient id="pupil" cx="38%" cy="35%" r="65%">
+      <stop offset="0%"   stop-color="#1c0c00"/>
+      <stop offset="100%" stop-color="#080300"/>
+    </radialGradient>
+    <clipPath id="lc">
+      <circle cx="27" cy="27" r="15.5"/>
+    </clipPath>
+  </defs>
+
+  <rect width="64" height="64" rx="13" ry="13" fill="url(#gold)"/>
+  <line x1="40" y1="40" x2="56" y2="56" stroke="#050505" stroke-width="8.5" stroke-linecap="round"/>
+  <circle cx="27" cy="27" r="20.75" fill="#050505"/>
+  <line x1="40" y1="40" x2="56" y2="56" stroke="#fdf9ed" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="27" cy="27" r="17" fill="none" stroke="#fdf9ed" stroke-width="5"/>
+  <circle cx="27" cy="27" r="15.5" fill="#fdf9ed" clip-path="url(#lc)"/>
+  <circle cx="27" cy="27" r="11" fill="url(#iris)" clip-path="url(#lc)"/>
+  <circle cx="27" cy="27" r="11" fill="none" stroke="rgba(40,20,5,0.45)" stroke-width="2.5" clip-path="url(#lc)"/>
+  <circle cx="27" cy="27" r="5.5" fill="url(#pupil)" clip-path="url(#lc)"/>
+  <circle cx="29.5" cy="23.5" r="2.2" fill="rgba(255,255,255,0.92)" clip-path="url(#lc)"/>
+  <circle cx="24" cy="30.5" r="1" fill="rgba(255,255,255,0.5)" clip-path="url(#lc)"/>
+  <path d="M 13,16 A 17,17 0 0,1 41,16" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="2" stroke-linecap="round"/>
+  <line x1="43" y1="42" x2="55" y2="54" stroke="rgba(255,255,255,0.40)" stroke-width="2" stroke-linecap="round"/>
+
 </svg>
